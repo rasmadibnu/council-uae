@@ -20,6 +20,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-vue-next": "^0.306.0",
+    "nuxt-icons": "^3.2.1",
     "postcss-custom-properties": "^13.3.4",
     "radix-vue": "^1.2.6",
     "shadcn-nuxt": "^0.8.6",
