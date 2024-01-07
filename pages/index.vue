@@ -118,5 +118,20 @@
     </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+import backgroundUrl from '~/assets/img/bg1.jpg'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+
+export default {
+    data() {
+        return { backgroundUrl }
+    }
+}
 </script>

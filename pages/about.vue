@@ -74,12 +74,5 @@
     </div>
 </template>
 
-<script>
-import backgroundUrl from '~/assets/img/inner-banner.jpg'
-
-export default {
-    data() {
-        return { backgroundUrl }
-    }
-}
+<script setup lang="ts">
 </script>
