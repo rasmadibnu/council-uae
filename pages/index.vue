@@ -28,52 +28,26 @@
                 <p class="text-2xl">Browse below our most used services</p>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-x-5">
-            <div>
-                <Card class="py-5">
-                    <CardContent>
-                        <div>
-                            <img src="~/assets/icons/icon-7/badge.svg" alt="blabla">
-                            New Membership
-                        </div>
-                    </CardContent>
-                    <CardFooter>
-                        <div class="flex space-x-5">
+        <div class="grid grid-cols-3 gap-5">
+            <div v-for="data in ourService" :key="data.id" class="bg-white h-[15rem] shadow-lg p-[30px] space-y-10">
+                <div class="h-[70%] flex space-x-5">
+                    <img class="w-12" :src="`_nuxt/assets/icons/${data.icon}`" :alt="data.icon">
+                    <p class="font-semibold text-xl">{{data.title}}</p>
+                </div>
+                <div class="flex justify-between">
+                    <NuxtLink to="/">
+                        <div class="flex space-x-1">
+                            <img class="w-5" src="~/assets/icons/info-circle.svg" alt="info-circle">
                             <p>Details</p>
-                            <p>Start Service</p>
                         </div>
-                    </CardFooter>
-                </Card>
-            </div>
-            <div>
-                <Card class="py-5">
-                    <CardContent>
-                        <div>
-                            Issuing a certification of origin for personal effect
+                    </NuxtLink>
+                    <NuxtLink to="/">
+                        <div class="flex space-x-1">
+                            <img class="w-5" src="~/assets/icons/power.svg" alt="info-circle">
+                            <p class="text-secondary">Start Service</p>
                         </div>
-                    </CardContent>
-                    <CardFooter>
-                        <div class="flex space-x-5">
-                            <p>Details</p>
-                            <p>Start Service</p>
-                        </div>
-                    </CardFooter>
-                </Card>
-            </div>
-            <div>
-                <Card class="py-5">
-                    <CardContent>
-                        <div>
-                            Issuing a Certification of Origin
-                        </div>
-                    </CardContent>
-                    <CardFooter>
-                        <div class="flex space-x-5">
-                            <p>Details</p>
-                            <p>Start Service</p>
-                        </div>
-                    </CardFooter>
-                </Card>
+                    </NuxtLink>
+                </div>
             </div>
         </div>
     </div>
@@ -120,18 +94,21 @@
 
 <script lang="ts">
 import backgroundUrl from '~/assets/img/bg1.jpg'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
 
+let ourService = [
+    { id: 1, icon: 'layer-1.svg', title: 'New Membership' },
+    { id: 2, icon: 'layer-1.svg', title: 'Issuing a certification of origin for personal effect' },
+    { id: 3, icon: 'layer-1.svg', title: 'Issuing a Certification of Origin' },
+    { id: 4, icon: 'layer-2.svg', title: 'Signature Attestation' },
+    { id: 5, icon: 'layer-2.svg', title: 'True Copy' },
+    { id: 6, icon: 'layer-2.svg', title: 'Document Verification' },
+]
 export default {
     data() {
-        return { backgroundUrl }
+        return { 
+            backgroundUrl,
+            ourService
+        }
     }
 }
 </script>

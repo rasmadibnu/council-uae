@@ -1,0 +1,17 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 73 73" style="enable-background:new 0 0 73 73;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#124460;stroke-width:2.8632;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#95222B;stroke-width:2.8632;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<path class="st0" d="M55.4,29.6V14c0-3.6-2.9-6.5-6.5-6.5H14.9c-3.6,0-6.5,2.9-6.5,6.5V59c0,3.6,2.9,6.5,6.5,6.5H49"></path>
+	<g>
+		<circle class="st1" cx="55.6" cy="38.6" r="9"></circle>
+		<polyline class="st1" points="50.4,46.5 50.4,60.3 55.4,55.7 60.4,60.3 60.4,46.5 		"></polyline>
+	</g>
+	<line class="st0" x1="21.4" y1="30.5" x2="43.8" y2="30.5"></line>
+	<line class="st0" x1="26.4" y1="20.5" x2="38.8" y2="20.5"></line>
+	<line class="st0" x1="21.4" y1="40.5" x2="36.4" y2="40.5"></line>
+	<line class="st0" x1="21.4" y1="54.5" x2="32.4" y2="54.5"></line>
+</g>
+</svg>
