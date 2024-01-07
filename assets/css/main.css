@@ -1,0 +1,18 @@
+.gradient {
+    background-image: url('inner-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    z-index: 0;
+}
+.gradient::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(42.64deg, rgba(215, 40, 46, 0.8039215686) 0.01%, rgba(18, 68, 96, 0.8509803922) 99.94%);
+    top: 0;
+    left: 0;
+    z-index: -100;
+}

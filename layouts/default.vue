@@ -11,13 +11,10 @@
                             <NuxtLink to="/">HOME</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/service">SERVICE</NuxtLink>
+                            <NuxtLink to="/services">SERVICES</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/">ABOUT</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/">RESOURCE</NuxtLink>
+                            <NuxtLink to="/about">ABOUT</NuxtLink>
                         </li>
                         <li>
                             <NuxtLink to="/">NEWS AND EVENTS</NuxtLink>
@@ -46,13 +43,33 @@
                 </div>
             </div>
             <div class="space-y-5">
-                <h5 class="text-[#d7282f]">QUICK LINKS</h5>
-                <div>
-                    
+                <h5 class="text-[#d7282f] pl-5">QUICK LINKS</h5>
+                <div class="pl-5">
+                    <ul class="grid grid-cols-2 gap-y-4">
+                        <li v-for="d in data" :key="d.id">
+                            <NuxtLink :to="d.path">{{ d.name }}</NuxtLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div></div>
-            <div></div>
+            <div class="space-y-5">
+                <h5 class="text-[#d7282f]">GET CONNECTED</h5>
+                <div>
+                    <ul class="grid grid-cols-5 gap-x-3">
+                        <li v-for="data in socialMedia" :key="data.id" class="h-10 w-10 flex items-center justify-center bg-[#124460] rounded-full">
+                            <NuxtLink to="/">
+                                <img :src="`/_nuxt/assets/icons/${data.name}`" :alt="data.name">
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="space-y-5">
+                <h5 class="text-[#d7282f]">SUBSCRIBE NEWSLETTER</h5>
+                <div>
+                    <Input type="text" placeholder="name@domain.com" />
+                </div>
+            </div>
         </div>
     </div>
     <div class="flex px-20 py-5 space-x-14">
@@ -65,5 +82,36 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup>
+<script>
+let data = [
+    { id: 1, name: 'Contact Us', path: '/' },
+    { id: 2, name: 'Terms &', path: '/' },
+    { id: 3, name: 'FAQs', path: '/' },
+    { id: 4, name: 'Conditions', path: '/' },
+    { id: 5, name: 'Sitemap', path: '/' },
+    { id: 6, name: 'Customer', path: '/' },
+    { id: 7, name: 'Privacy', path: '/' },
+    { id: 8, name: 'Happiness', path: '/' },
+    { id: 9, name: 'Policy', path: '/' },
+    { id: 10, name: 'Charter', path: '/' },
+];
+
+let socialMedia = [
+    { id: 1, name: 'brand-facebook-filled.svg' },
+    { id: 2, name: 'brand-x.svg' },
+    { id: 3, name: 'brand-instagram.svg' },
+    { id: 4, name: 'brand-linkedin.svg' },
+    { id: 4, name: 'brand-youtube-filled.svg' },
+]
+export default {
+    data() {
+        return {
+            data,
+            socialMedia,
+        }
+    },
+    mounted() {
+        console.log(data)
+    }
+}
 </script>

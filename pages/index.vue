@@ -33,7 +33,7 @@
                 <Card class="py-5">
                     <CardContent>
                         <div>
-                            <nuxt-icon name="icon-7/badge" />
+                            <img src="~/assets/icons/icon-7/badge.svg" alt="blabla">
                             New Membership
                         </div>
                     </CardContent>
@@ -118,20 +118,5 @@
     </div>
 </template>
 
-<script>
-import backgroundUrl from '~/assets/img/bg1.jpg'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-
-export default {
-    data() {
-        return { backgroundUrl }
-    }
-}
+<script lang="ts" setup>
 </script>
