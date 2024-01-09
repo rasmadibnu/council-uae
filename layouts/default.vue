@@ -58,7 +58,7 @@
                     <ul class="grid grid-cols-5 gap-x-3">
                         <li v-for="data in socialMedia" :key="data.id" class="h-10 w-10 flex items-center justify-center bg-[#124460] rounded-full">
                             <NuxtLink to="/">
-                                <img :src="`/_nuxt/assets/icons/${data.name}`" :alt="data.name">
+                                <img :src="`/icons/${data.name}`" :alt="data.name">
                             </NuxtLink>
                         </li>
                     </ul>

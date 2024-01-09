@@ -31,7 +31,7 @@
         <div class="grid grid-cols-3 gap-5">
             <div v-for="data in ourService" :key="data.id" class="bg-white h-[15rem] shadow-lg p-[30px] space-y-10">
                 <div class="h-[70%] flex space-x-5">
-                    <img class="w-12" :src="`_nuxt/assets/icons/${data.icon}`" :alt="data.icon">
+                    <img class="w-12" :src="`/icons/${data.icon}`" :alt="data.icon">
                     <p class="font-semibold text-xl">{{data.title}}</p>
                 </div>
                 <div class="flex justify-between">
@@ -50,9 +50,14 @@
                 </div>
             </div>
         </div>
+        <NuxtLink to="/">
+            <div class="max-w-max mt-10 hover:bg-primary hover:text-white px-6 py-3 rounded-md border border-primary">
+                <p>View All Service</p>
+            </div>
+        </NuxtLink>
     </div>
 
-    <div class="p-20">
+    <div class="p-20 space-y-20">
         <div class="flex">
             <div class="flex-1">
                 <div class="w-32">
@@ -63,9 +68,25 @@
                 <p class="text-2xl">Over the years, Dubai Chamber of Commerce has established a number of successful initiatives</p>
             </div>
         </div>
+        <div class="grid grid-cols-3 gap-x-20">
+            <div class="flex items-center p-10 border border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
+                <img src="/img/dcfb_logo.jpg" alt="dcfb_logo">
+            </div>
+            <div class="flex items-center p-10 border border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
+                <img src="/img/Centre-responsible_v1-01.png" alt="dcfb_logo">
+            </div>
+            <div class="flex items-center border p-10 border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
+                <img src="/img/dubai-innovation-model.jpg" alt="dcfb_logo">
+            </div>
+        </div>
+        <NuxtLink to="/">
+            <div class="max-w-max mt-10 hover:bg-primary hover:text-white px-6 py-3 rounded-md border border-primary">
+                <p>View All Initiatives</p>
+            </div>
+        </NuxtLink>
     </div>
 
-    <div class="bg-[#dbe2e8] p-20">
+    <div class="bg-[#dbe2e8] p-20 space-y-10">
         <div class="flex">
             <div class="flex-1">
                 <div class="w-32">
@@ -76,6 +97,24 @@
                 <p class="text-2xl">One of Dubai Chamber's main objectives is to keep Chamber members and the business community updated with the latest economic development and regulations, business opportunities, facilities and relevant business contacts through well documented materials.</p>
             </div>
         </div>
+        <div class="grid grid-cols-3 gap-5">
+            <div v-for="data in dataResources" :key="data.id" class="cursor-pointer relative">
+                <div class="absolute w-full h-full top-0 left-0 bg-primary z-10 opacity-65"></div>
+                <img class="w-full h-full block z-20" :src="`/img/${data.image}`" alt="Information_Research">
+                <div class="absolute w-52 top-10 left-5 z-30">
+                    <h4 class="text-white text-xl font-semibold">{{ data.title }}</h4>
+                </div>
+                <div class="flex space-x-3 absolute bottom-10 left-5 z-40">
+                    <p class="text-white font-medium">VIEW DETAILS</p>
+                    <img src="~/assets/icons/arrow-narrow-right.svg" alt="arrow-narrow-right">
+                </div>
+            </div>
+        </div>
+        <NuxtLink to="/">
+            <div class="max-w-max mt-10 hover:bg-primary hover:text-white px-6 py-3 rounded-md border border-primary">
+                <p>View All Resources</p>
+            </div>
+        </NuxtLink>
     </div>
 
     <div class="p-20">
@@ -87,6 +126,13 @@
             </div>
             <div class="flex-1">
                 <p class="text-2xl">Over the years, Dubai Chamber of Commerce has established a number of successful initiatives</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-20">
+        <div class="flex space-x-5">
+            <div v-for="logo in logos" :key="logo.id">
+                <img :src="`_nuxt/assets/img/${logo.img}`" alt="">
             </div>
         </div>
     </div>
@@ -103,11 +149,28 @@ let ourService = [
     { id: 5, icon: 'layer-2.svg', title: 'True Copy' },
     { id: 6, icon: 'layer-2.svg', title: 'Document Verification' },
 ]
+
+let dataResources = [
+    { id: 1, title: 'Centre for Business Studies and Research', image: 'Information_Research.jpg' },
+    { id: 2, title: 'Digital Services Guidelines', image: 'E-services-Help.jpg' },
+    { id: 3, title: 'Dubai Innovation Index', image: 'Dubai_Innvation.jpg' },
+    { id: 4, title: 'E-Library', image: 'Login.jpg' },
+    { id: 5, title: 'Dubai Quarterly Business Survey', image: 'Business-Survey.jpg' },
+]
+
+let logos = [
+    { id: 1, image: 'uae-logo.jpg' },
+    { id: 2, image: 'footer-logo05.png' },
+    { id: 3, image: 'footer-logo06.png' },
+    { id: 4, image: 'footer-logo02.png' },
+]
 export default {
     data() {
         return { 
             backgroundUrl,
-            ourService
+            ourService,
+            dataResources,
+            logos
         }
     }
 }
