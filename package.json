@@ -16,9 +16,13 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@tabler/icons-vue": "^2.45.0",
     "@vueuse/core": "^10.7.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "embla-carousel": "^8.0.0-rc19",
+    "embla-carousel-autoplay": "^8.0.0-rc19",
+    "embla-carousel-vue": "^8.0.0-rc19",
     "lucide-vue-next": "^0.306.0",
     "nuxt-icons": "^3.2.1",
     "postcss-custom-properties": "^13.3.4",

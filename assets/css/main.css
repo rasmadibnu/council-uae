@@ -1,3 +1,7 @@
+body {
+    font-family: Poppins, sans-serif;
+}
+
 .gradient {
     background-image: url('inner-banner.jpg');
     background-size: cover;

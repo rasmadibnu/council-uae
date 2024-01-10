@@ -78,6 +78,10 @@ module.exports = {
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
       },
     },
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif']
+    }
   },
   plugins: [animate],
 }
