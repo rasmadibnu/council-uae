@@ -27,6 +27,7 @@
     "nuxt-icons": "^3.2.1",
     "postcss-custom-properties": "^13.3.4",
     "radix-vue": "^1.2.6",
+    "sass": "^1.69.7",
     "shadcn-nuxt": "^0.8.6",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",

@@ -1,9 +1,29 @@
+<script setup lang="ts">
+
+interface Props {
+    title?: string
+}
+
+const props = defineProps<Props>()
+
+</script>
 <template>
-    <div class="gradient px-5 lg:px-20 py-10 text-white relative">
+    <div class="gradient px-5 lg:px-20 py-10 relative">
         <div class="space-y-20">
             <div>
-                <ul class="flex space-x-3 text-xs lg:text-sm">
+                <ul class="bc text-white flex space-x-3 text-xs lg:text-sm">
                     <li>
+                        <NuxtLink to="/">
+                            <p style="background-color: rgba(0, 0, 0, 0.05)">Home</p>
+                        </NuxtLink>
+                    </li>
+                    <li v-if="$slots.breadcrumbs">
+                        <p>
+                            >
+                        </p>
+                    </li>
+                    <slot name="breadcrumbs" />
+                    <!-- <li>
                         <NuxtLink to="/">
                             <p style="background-color: rgba(0, 0, 0, 0.05)">Home</p>
                         </NuxtLink>
@@ -25,30 +45,22 @@
                     </li>
                     <li>
                         <p style="background-color: rgba(0, 0, 0, 0.05)">About Dubai Chamber of Commerce</p>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="z-10 overflow-hidden">
-                <div class="w-[18rem] lg:w-[45rem]">
-                    <h1 style="background-color: rgba(0, 0, 0, 0.05)" class="text-2xl lg:text-6xl font-semibold">{{ title }}</h1>
+                <div class="w-[18rem] lg:w-[45rem] text-white" v-if="props.title">
+                    <h1 style="background-color: rgba(0, 0, 0, 0.05)" class="text-2xl lg:text-6xl font-semibold">{{ props.title }}</h1>
                 </div>
+                <slot name="content" />
             </div>
         </div>
-    </div>
+    </div> 
 </template>
-
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    props: {
-        title: {
-            type: String,
-            default: ''
-        }
-    },
-    setup() {
-        
-    },
-})
-</script>
+<style lang="scss">
+ul.bc {
+  li:last-child {
+    color: #9ca3af;
+  }
+}
+</style>

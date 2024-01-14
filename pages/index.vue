@@ -45,7 +45,8 @@
             </div>
         </div>
         <div class="grid grid-cols-3 gap-5">
-            <div v-for="data in ourService" :key="data.id" class="bg-white h-[15rem] shadow-lg p-[30px] space-y-10">
+            <ServiceCard v-for="data in ourService" :key="data.id" :title="data.title" :image="data.icon" />
+            <!-- <div v-for="data in ourService" :key="data.id" class="bg-white h-[15rem] shadow-lg p-[30px] space-y-10">
                 <div class="h-[70%] flex space-x-5">
                     <img class="w-12" :src="`/icons/${data.icon}`" :alt="data.icon">
                     <p class="font-semibold text-xl">{{data.title}}</p>
@@ -64,7 +65,7 @@
                         </div>
                     </NuxtLink>
                 </div>
-            </div>
+            </div> -->
         </div>
         <NuxtLink to="/">
             <div class="max-w-max mt-10 hover:bg-primary hover:text-white px-6 py-3 rounded-md border border-primary">
