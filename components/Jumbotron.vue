@@ -8,8 +8,8 @@ const props = defineProps<Props>()
 
 </script>
 <template>
-    <div class="gradient px-5 lg:px-20 py-10 relative">
-        <div class="space-y-20">
+    <div class="gradient px-5  relative">
+        <div class="space-y-20 max-w-6xl py-10 mx-auto xl:px-0 px-8">
             <div>
                 <ul class="bc text-white flex space-x-3 text-xs lg:text-sm">
                     <li>
