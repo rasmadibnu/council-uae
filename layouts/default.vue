@@ -1,9 +1,9 @@
 <template>
-    <div class="px-20 py-5 bg-gray-200 ">
+    <div class="px-20 py-5">
         <div class="">
             <div class="space-y-5 lg:space-y-0 lg:flex lg:justify-between">
                 <div class="w-40">
-                    <img src="~/assets/img/dubai-chamber-logo-en.png" alt="dubai-chamber-logo-en">
+                    <img src="/img/ibcuae-logo.jpg" alt="ibcuae-logo">
                 </div>
                 <nav class="hidden lg:flex lg:space-x-5">
                     <ul class="flex justify-between items-center space-x-5 font-semibold text-lg">
@@ -112,7 +112,7 @@
         <div class="grid space-y-5 lg:space-y-0 lg:grid-cols-4 lg:gap-x-5">
             <div class="space-y-7">
                 <NuxtLink to="/">
-                    <img src="~/assets/img/dubai-chamber-logo-en.png" class="w-[60%]" alt="dubai-chamber-logo-en">
+                    <img src="/img/ibcuae-logo.jpg" class="w-[60%]" alt="dubai-chamber-logo-en">
                 </NuxtLink>
                 <div class="text-xl">
                     <p class="text-[#d7282f]">TOLL FREE</p>

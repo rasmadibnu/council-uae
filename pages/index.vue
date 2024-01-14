@@ -1,19 +1,19 @@
 <template>
     <div class="overflow-x-hidden">
         <Carousel
-            class="w-full"
+            class="w-full overflow-hidden"
             :plugins="[plugin]"
             @mouseenter="plugin.stop"
             @mouseleave="[plugin.reset(), plugin.play(), console.log('Runing')];"
         >
             <CarouselContent>
                 <CarouselItem v-for="(data, index) in jumbotron" :key="index">
-                    <div :style="{backgroundImage: `url(${data.banner})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}">
-                        <div class="px-20 py-36 text-white space-y-5">
-                            <div class="w-[30rem]">
-                                <p class="font-bold text-5xl">{{ data.title }}</p>
+                    <div id="jumbotron" class="overflow-x-hidden" :style="{backgroundImage: `url(${data.banner})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}">
+                        <div class="p-5 lg:px-20 py-36 text-white space-y-5">
+                            <div class="lg:w-[30rem]">
+                                <p class="font-bold text-3xl lg:text-5xl">{{ data.title }}</p>
                             </div>
-                            <div class="w-[33rem]">
+                            <div class="lg:w-[33rem]">
                                 <p class="font-light">{{ data.desc }}</p>
                             </div>
                             <div>
@@ -152,15 +152,15 @@
         </NuxtLink>
     </div>
 
-    <div class="bg-[#dbe2e8] p-20 space-y-10">
-        <div class="flex">
+    <div id="bg-resource" class="bg-[#dbe2e8] p-5 lg:p-20 space-y-10">
+        <div class="lg:flex">
             <div class="flex-1">
                 <div class="w-32">
-                    <p class="text-[4rem] text-[#124460] font-semibold leading-[4.5rem]">RESOURCES</p>
+                    <p class="text-4xl lg:text-[4rem] text-[#124460] font-semibold leading-[4.5rem]">RESOURCES</p>
                 </div>
             </div>
             <div class="flex-1">
-                <p class="text-2xl">One of Dubai Chamber's main objectives is to keep Chamber members and the business community updated with the latest economic development and regulations, business opportunities, facilities and relevant business contacts through well documented materials.</p>
+                <p class="text-md lg:text-2xl">One of Dubai Chamber's main objectives is to keep Chamber members and the business community updated with the latest economic development and regulations, business opportunities, facilities and relevant business contacts through well documented materials.</p>
             </div>
         </div>
         <div class="grid grid-cols-3 gap-5 overflow-x-hidden">
@@ -198,7 +198,7 @@
     <div class="p-20">
         <div class="flex space-x-5">
             <div v-for="logo in logos" :key="logo.id">
-                <img :src="`_nuxt/assets/img/${logo.img}`" alt="">
+                <img :src="logo.image" alt="logo">
             </div>
         </div>
     </div>
@@ -246,10 +246,10 @@ let dataResources = [
 ]
 
 let logos = [
-    { id: 1, image: 'uae-logo.jpg' },
-    { id: 2, image: 'footer-logo05.png' },
-    { id: 3, image: 'footer-logo06.png' },
-    { id: 4, image: 'footer-logo02.png' },
+    { id: 1, image: '/img/uae-logo.jpg' },
+    { id: 2, image: '/img/footer-logo05.png' },
+    { id: 3, image: '/img/footer-logo06.png' },
+    { id: 4, image: '/img/footer-logo02.png' },
 ]
 export default {
     components: { 
@@ -271,3 +271,23 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#bg-resource {
+    background-image: url('/img/home-resources-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 640px) {
+    #bg-resource {
+        background-size: cover; /* Ukuran gambar yang sesuai dengan layar */
+        background-position: center; /* Posisi gambar di tengah */
+    }
+
+    #jumbotron {
+        background-size: cover; /* Ukuran gambar yang sesuai dengan layar */
+        background-position: center; /* Posisi gambar di tengah */
+    }
+}
+</style>

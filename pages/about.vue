@@ -40,8 +40,9 @@
         <div class="px-5 lg:px-20 py-10 lg:py-24 lg:z-10">
             <div class="flex flex-col space-y-14 lg:space-y-0 lg:flex-row">
                 <div class="flex-1 space-y-4">
-                    <h2 class="font-semibold text-xl lg:text-4xl">Dubai Chamber of Commerce was established in 1965</h2>
-                    <p class="text-sm lg:text-xl">We are a non-profit public organization whose mission is to represent, support and protect the interests of the business community in Dubai. It does so by creating a favourable environment; promoting Dubai as an international business hub and by supporting the development of business.</p>
+                    <h2 class="font-medium text-xl lg:text-3xl">Our Indonesia United Arab Emirates Business Council just establish as humble beginning as solid Business Community in the 2022.</h2>
+                    <p class="text-sm lg:text-xl">We represent Indonesia United Arab Emirates Business Community with goals to Develop, maintain sustain special business interest between Indonesia Business Community and United Arab Emirates Business Community.</p>
+                    <p class="text-sm lg:text-xl">Indonesia United Arab Emirates Business Council aims to foster economic cooperation, trade, investment, and business collaboration between the two countries, nurture enhance partnership to be more real, executable supported by excellent Team to enable a sustainable long-term operation.  The community will provide a foundation platform for businesses owners, government officials, and industry leaders to interact, share insights, and collaborate on projects that benefit both economies</p>
                 </div>
                 <div class="flex-1 lg:relative">
                     <div class="lg:absolute right-[-80px] top-[-30px]">
@@ -59,7 +60,7 @@
             </div>
             <div class="space-y-5 w-96">
                 <h3 class="text-2xl lg:text-5xl font-semibold text-[#124460]">Vision</h3>
-                <p class="text-xs lg:text-lg">To be the best chamber in the world on driving competitiveness and business growth by 2024</p>
+                <p class="text-xs lg:text-lg">Focus Deliver Real Solution with Impact, Indonesia envisions a focused approach solution to Enhance Economic Cooperation, Trade, Investment, and Cultural Ties with the United Arab Emirates (UAE)</p>
             </div>
         </div>
         <div class="flex py-8 lg:py-14">
@@ -68,7 +69,7 @@
             </div>
             <div class="space-y-3 w-96">
                 <h3 class="text-2xl lg:text-5xl font-semibold text-[#124460]">Mission</h3>
-                <p class="text-xs lg:text-lg">Represent, support and protect the interests of the business community in Dubai</p>
+                <p class="text-xs lg:text-lg">Strategic Partnership aims to leverage its strengths to contribute to the mutual growth and prosperity of both countries.</p>
             </div>
         </div>
     </div>
