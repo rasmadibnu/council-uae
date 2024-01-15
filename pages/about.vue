@@ -1,6 +1,15 @@
 <template>
     <div>
-        <div class="gradient px-5 lg:px-20 py-10 text-white relative">
+        <Jumbotron title="About Dubai Chamber of Commerce">
+            <template #breadcrumbs>
+                <li>
+                    <NuxtLink to="/">
+                        <p style="background-color: rgba(0, 0, 0, 0.05)">About</p>
+                    </NuxtLink>
+                </li>
+            </template>
+        </Jumbotron>
+        <!-- <div class="gradient px-5 lg:px-20 py-10 text-white relative">
             <div class="space-y-20">
                 <div>
                     <ul class="flex space-x-3 text-xs lg:text-sm">
@@ -35,7 +44,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="px-5 lg:px-20 py-10 lg:py-24 lg:z-10">
             <div class="flex flex-col space-y-14 lg:space-y-0 lg:flex-row">

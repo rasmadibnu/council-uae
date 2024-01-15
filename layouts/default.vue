@@ -22,7 +22,7 @@
                             <NuxtLink to="/">NEWS AND EVENTS</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/">CONTACTS</NuxtLink>
+                            <NuxtLink to="/contacts">CONTACTS</NuxtLink>
                         </li>
                     </ul>
                 </nav>
