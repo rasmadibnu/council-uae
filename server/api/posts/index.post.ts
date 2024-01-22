@@ -1,15 +1,14 @@
 import { z } from "zod";
-import { createNews } from "~/server/db/repositories/newsRepository";
+import { createPost } from "~/server/db/repositories/postRepository";
 import response from "~/server/utils/helper";
-import type { News } from "~/types/News";
-
+import type { Prisma } from "@prisma/client";
 const validation = z.object({
   title: z.string(),
   content: z.string(),
   category_id: z.number(),
 });
 
-export default defineEventHandler(async (event) => {
+export default defineAuthenticatedEventHandler(async (event, user) => {
   const body = await readBody(event);
   const validate = validation.safeParse(body);
   if (!validate.success)
@@ -23,13 +22,21 @@ export default defineEventHandler(async (event) => {
       })
     );
 
-  const data: News = {
+  const data: Prisma.PostCreateInput = {
     title: body.title,
     content: body.content,
-    category_id: body.category_id,
-    created_by: event.context.auth.user.id,
+    category: {
+      connect: {
+        id: body.category_id,
+      },
+    },
+    author: {
+      connect: {
+        id: user.id,
+      },
+    },
   };
 
-  const user = await createNews(data);
-  return response(200, "User created sucessfully", user);
+  const post = await createPost(data);
+  return response(200, "Post created sucessfully", post);
 });

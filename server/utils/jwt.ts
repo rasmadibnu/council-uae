@@ -1,5 +1,5 @@
+import type { User } from "@prisma/client";
 import jwt from "jsonwebtoken";
-import type { User } from "~/types/User";
 
 export const decodeAccessToken = (token: string) => {
   const config = useRuntimeConfig();

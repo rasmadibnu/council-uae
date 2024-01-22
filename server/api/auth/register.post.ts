@@ -1,8 +1,8 @@
 import bcrypt from "bcrypt";
-import { type User } from "~/types/User";
 import { z } from "zod";
 import response from "~/server/utils/helper";
 import { createUser } from "~/server/db/repositories/userRepository";
+import { Prisma } from "@prisma/client";
 
 const validation = z.object({
   username: z.string(),
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
   const { username, password, name } = body;
   const encryptedPassword: string = await bcrypt.hash(password, 10);
 
-  const data: User = {
+  const data: Prisma.UserCreateInput = {
     username: username,
     name: name,
     password: encryptedPassword,

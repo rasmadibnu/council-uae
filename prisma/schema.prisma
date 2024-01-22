@@ -19,11 +19,11 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  news News[]
+  posts Post[]
   @@map("user")
 }
 
-model News {
+model Post {
   id        Int     @id @default(autoincrement())
   title     String
   content   String?
@@ -34,13 +34,13 @@ model News {
   category_id Int 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  @@map("news")
+  @@map("posts")
 }
 
 model Category {
   id        Int     @id @default(autoincrement())
   name     String 
 
-  news News[]
+  posts Post[]
   @@map("categories")
 }
