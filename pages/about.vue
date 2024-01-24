@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Jumbotron title="About Dubai Chamber of Commerce">
+        <Jumbotron title="About Indonesia Business Council UAE">
             <template #breadcrumbs>
                 <li>
                     <NuxtLink to="/">
@@ -47,14 +47,14 @@
         </div> -->
 
         <div class="px-5 lg:px-20 py-10 lg:py-24 lg:z-10">
-            <div class="flex flex-col space-y-14 lg:space-y-0 lg:flex-row">
+            <div class="space-y-14 lg:space-y-10 lg:flex-row">
                 <div class="flex-1 space-y-4">
                     <h2 class="font-medium text-xl lg:text-3xl">Our Indonesia United Arab Emirates Business Council just establish as humble beginning as solid Business Community in the 2022.</h2>
-                    <p class="text-sm lg:text-xl">We represent Indonesia United Arab Emirates Business Community with goals to Develop, maintain sustain special business interest between Indonesia Business Community and United Arab Emirates Business Community.</p>
-                    <p class="text-sm lg:text-xl">Indonesia United Arab Emirates Business Council aims to foster economic cooperation, trade, investment, and business collaboration between the two countries, nurture enhance partnership to be more real, executable supported by excellent Team to enable a sustainable long-term operation.  The community will provide a foundation platform for businesses owners, government officials, and industry leaders to interact, share insights, and collaborate on projects that benefit both economies</p>
+                    <p class="text-sm lg:text-base">We represent Indonesia United Arab Emirates Business Community with goals to Develop, maintain sustain special business interest between Indonesia Business Community and United Arab Emirates Business Community.</p>
+                    <p class="text-sm lg:text-base">Indonesia United Arab Emirates Business Council aims to foster economic cooperation, trade, investment, and business collaboration between the two countries, nurture enhance partnership to be more real, executable supported by excellent Team to enable a sustainable long-term operation.  The community will provide a foundation platform for businesses owners, government officials, and industry leaders to interact, share insights, and collaborate on projects that benefit both economies</p>
                 </div>
-                <div class="flex-1 lg:relative">
-                    <div class="lg:absolute right-[-80px] top-[-30px]">
+                <div class="flex-1">
+                    <div class="">
                         <img class="w-[450px] lg:z-50" src="~/assets/img/IMG_6960-copy.jpg" alt="IMG_6960-copy">
                     </div>
                 </div>

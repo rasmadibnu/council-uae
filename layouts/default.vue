@@ -19,7 +19,7 @@
                             <NuxtLink to="/about">ABOUT</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/">NEWS AND EVENTS</NuxtLink>
+                            <NuxtLink to="/news-and-events">NEWS AND EVENTS</NuxtLink>
                         </li>
                         <li>
                             <NuxtLink to="/contacts">CONTACTS</NuxtLink>
@@ -114,10 +114,6 @@
                 <NuxtLink to="/">
                     <img src="/img/ibcuae-logo.jpg" class="w-[60%]" alt="dubai-chamber-logo-en">
                 </NuxtLink>
-                <div class="text-xl">
-                    <p class="text-[#d7282f]">TOLL FREE</p>
-                    <p>800CHAMBER(800 242 6237)</p>
-                </div>
             </div>
             <div class="space-y-5">
                 <h5 class="text-[#d7282f] lg:pl-5">QUICK LINKS</h5>
@@ -151,11 +147,11 @@
     </div>
     <div class="flex flex-col lg:flex-row text-center lg:text-left px-5 lg:px-20 py-5 lg:space-x-14">
         <div>
-            <p>Copyright © 2024 Dubai Chamber of Commerce, all rights reserved | Site maintained by Dubai Chamber of Commerce.</p>
+            <p>Copyright © 2024 Indonesia Business Council UAE, all rights reserved | Site maintained by Indonesia Business Coucil of Commerce.</p>
             <p>The site is best viewed using IE11 and above, Mozilla Firefox, Safari and Chrome</p>
         </div>
         <div>
-            <p>Last updated on: 29-09-2022</p>
+            <p>Last updated on: 15-01-2024</p>
         </div>
     </div>
 </template>

@@ -24,27 +24,26 @@ import {
                     </div>
                 </CardHeader>
                 <CardContent>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nam! Ea nostrum minus, porro repellendus perferendis doloribus qui voluptatem, provident consequuntur veritatis dolor exercitationem! Inventore repellat ducimus ab fuga enim.
-                    <!-- <Table>
+                    <Table>
                         <TableBody>
-                            <TableRow class="border-0">
-                                <TableCell>Toll Free</TableCell>
-                                <TableCell>: <span class="text-secondary" >800 242 6237 (800 CHAMBER)</span></TableCell>
+                            <TableRow>
+                                <TableCell class="pl-0">Business Address United Arab Emirates</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >Yes Business Tower 10 FL, Al Barsha Dubai</span></TableCell>
                             </TableRow>
                             <TableRow class="border-0">
-                                <TableCell>International</TableCell>
-                                <TableCell>: <span class="text-secondary" >(+971) 4 228 0000</span></TableCell>
+                                <TableCell class="pl-0">Direct  Contact Office UAE</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >(+971) 4 202 8888</span></TableCell>
                             </TableRow>
                             <TableRow class="border-0">
-                                <TableCell>Fax</TableCell>
-                                <TableCell>: <span class="text-secondary" >(+971) 4 202 8888</span></TableCell>
+                                <TableCell class="pl-0">WhatsApp Middle East</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >(+966) 53725258169</span></TableCell>
                             </TableRow>
                             <TableRow class="border-0">
-                                <TableCell>Email</TableCell>
-                                <TableCell>: <span class="text-secondary" >customercare@dubaichamber.com</span></TableCell>
+                                <TableCell class="pl-0">Email</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >www.ibcuae.id</span></TableCell>
                             </TableRow>
                         </TableBody>
-                    </Table> -->
+                    </Table>
                 </CardContent>
             </Card>
             <Card>
@@ -55,26 +54,19 @@ import {
                     </div>
                 </CardHeader>
                 <CardContent>
-                    Dubai Chambers, Baniyas Road, Deira, Dubai, U.A.E
-
-
                     <Table>
                         <TableBody>
-                            <TableRow class="border-0">
-                                <TableCell class="pl-0">P.O Box</TableCell>
-                                <TableCell class="pl-0">: <span class="text-secondary" >1457</span></TableCell>
+                            <TableRow>
+                                <TableCell class="pl-0">Business Address Indonesia</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >Pakuwon Tower 11Fl , Casablanca  South Jakarta</span></TableCell>
                             </TableRow>
                             <TableRow class="border-0">
-                                <TableCell class="pl-0">Makani</TableCell>
-                                <TableCell class="pl-0">: <span class="text-secondary" >3035894820</span></TableCell>
-                            </TableRow>
-                            <TableRow class="border-0">
-                                <TableCell class="pl-0">Fax</TableCell>
-                                <TableCell class="pl-0">: <span class="text-secondary" >(+971) 4 202 8888</span></TableCell>
+                                <TableCell class="pl-0">WhatsApp Indonesia</TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >(+62) 85694487429</span></TableCell>
                             </TableRow>
                             <TableRow class="border-0">
                                 <TableCell class="pl-0">Email</TableCell>
-                                <TableCell class="pl-0">: <span class="text-secondary" >customercare@dubaichamber.com</span></TableCell>
+                                <TableCell class="pl-0">: <span class="text-secondary" >www.ibcuae.id</span></TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>

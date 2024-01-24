@@ -13,7 +13,7 @@
                             <div class="lg:w-[30rem]">
                                 <p class="font-bold text-3xl lg:text-5xl">{{ data.title }}</p>
                             </div>
-                            <div class="lg:w-[33rem]">
+                            <div class="lg:w-[50rem]">
                                 <p class="font-light">{{ data.desc }}</p>
                             </div>
                             <div>
@@ -30,6 +30,19 @@
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
+    </div>
+
+    <div class="p-5 lg:p-20 space-y-10">
+        <div class="space-y-10">
+            <div class="flex-1">
+                <p class="text-[2rem] text-[#124460] font-semibold"> INDONESIA BUSINESS COUNCIL UAE OBJECTIVE & AIMS</p>
+            </div>
+            <div>
+                <ul class="space-y-3 list-disc pl-5">
+                    <li class="text-sm lg:text-lg border border-gray-300 max-w-max px-2 rounded-sm" v-for="(data, index) in objectiveAims" :key="index">{{ data.desc }}</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Dekstop Our Service -->
@@ -137,10 +150,10 @@
         </div>
         <div class="grid grid-cols-3 gap-x-20">
             <div class="flex items-center p-10 border border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
-                <img src="/img/dcfb_logo.jpg" alt="dcfb_logo">
+                <img src="/img/ibcuae-logo.jpg" alt="dcfb_logo">
             </div>
             <div class="flex items-center p-10 border border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
-                <img src="/img/Centre-responsible_v1-01.png" alt="dcfb_logo">
+                <img src="/img/pakuwon.jpg" alt="dcfb_logo">
             </div>
             <div class="flex items-center border p-10 border-gray-300 cursor-pointer hover:shadow-md hover:border-black">
                 <img src="/img/dubai-innovation-model.jpg" alt="dcfb_logo">
@@ -188,7 +201,7 @@
         <div class="flex">
             <div class="flex-1">
                 <div class="w-32">
-                    <p class="text-[4rem] text-[#124460] font-semibold leading-[4.5rem]">MEDIA HIGHLIGHTS</p>
+                    <p class="text-[4rem] text-[#124460] font-semibold leading-[4.5rem]">OUR GALLERY</p>
                 </div>
             </div>
             <div class="flex-1">
@@ -196,12 +209,23 @@
             </div>
         </div>
     </div>
-    <div class="p-20">
-        <div class="flex space-x-5">
-            <div v-for="logo in logos" :key="logo.id">
-                <img :src="logo.image" alt="logo">
-            </div>
-        </div>
+    <div class="pb-10">
+        <Carousel
+            class="w-full overflow-hidden"
+            :plugins="[plugin]"
+            @mouseenter="plugin.stop"
+            @mouseleave="[plugin.reset(), plugin.play(), console.log('Runing')];"
+        >
+            <CarouselContent class="w-full mx-auto">
+                <CarouselItem v-for="data in logos" :key="data.id" class="flex justify-center">
+                    <div class="w-[30rem]">
+                        <img :src="data.image" alt="">
+                    </div>
+                </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+        </Carousel>
     </div>
 </template>
 
@@ -219,23 +243,26 @@ const plugin = Autoplay({
 let jumbotron = [
     {
         title: 'Unlocking Dubai’s Ambitious Future', 
-        desc: 'Dubai Chambers is accelerating the emirate’s journey to become the leading global hub for business, trade, and investment', 
-        banner: '/img/bg1.jpg' 
+        desc: 'Indonesia Business Council United Arab Emirates (IBCUAE) aims to foster Economic Cooperation, Trade, Investment, and Business Collaboration between the two countries, nurture enhance partnership to be more real, executable supported by excellent Team to enable a sustainable long-term operation. The community council will provide a foundation platform for Business Owners, Government Officials, and Industry Leaders to Interact, Share Insights, and Collaborate on projects that benefit both economies', 
+        banner: '/img/img20231112170935_orig.jpg' 
     },
-    {
-        title: 'Dubai Centre for Family Businesses', 
-        desc: 'Dubai Centre for Family Businesses (DCFB) was launched under the umbrella of Dubai Chambers to achieve His Highness Sheikh Mohammed bin Rashid Al Maktoum’s vision of ensuring the sustainability and growth of family businesses as key contributors to the nation’s economy.', 
-        banner: '/img/bg2.jpg' 
-    },
+    // {
+    //     title: 'Dubai Centre for Family Businesses', 
+    //     desc: 'Dubai Centre for Family Businesses (DCFB) was launched under the umbrella of Dubai Chambers to achieve His Highness Sheikh Mohammed bin Rashid Al Maktoum’s vision of ensuring the sustainability and growth of family businesses as key contributors to the nation’s economy.', 
+    //     banner: '/img/bg2.jpg' 
+    // },
 ]
 
 let ourService = [
     { id: 1, icon: 'layer-1.svg', title: 'New Membership' },
-    { id: 2, icon: 'layer-1.svg', title: 'Issuing a certification of origin for personal effect' },
-    { id: 3, icon: 'layer-1.svg', title: 'Issuing a Certification of Origin' },
-    { id: 4, icon: 'layer-2.svg', title: 'Signature Attestation' },
-    { id: 5, icon: 'layer-2.svg', title: 'True Copy' },
-    { id: 6, icon: 'layer-2.svg', title: 'Document Verification' },
+    { id: 2, icon: 'member.svg', title: 'Membership Renewal' },
+    { id: 3, icon: 'member.svg', title: 'Membership Amendment' },
+    { id: 4, icon: 'member.svg', title: 'Membership Cancellation' },
+    // { id: 2, icon: 'layer-1.svg', title: 'Issuing a certification of origin for personal effect' },
+    // { id: 3, icon: 'layer-1.svg', title: 'Issuing a Certification of Origin' },
+    // { id: 4, icon: 'layer-2.svg', title: 'Signature Attestation' },
+    // { id: 5, icon: 'layer-2.svg', title: 'True Copy' },
+    { id: 5, icon: 'layer-2.svg', title: 'Document Verification' },
 ]
 
 let dataResources = [
@@ -247,11 +274,25 @@ let dataResources = [
 ]
 
 let logos = [
-    { id: 1, image: '/img/uae-logo.jpg' },
-    { id: 2, image: '/img/footer-logo05.png' },
-    { id: 3, image: '/img/footer-logo06.png' },
-    { id: 4, image: '/img/footer-logo02.png' },
+    { id: 1, image: '/img/img20231112170935_orig.jpg' },
+    { id: 2, image: '/img/img20231202135312_orig.jpg' },
+    { id: 3, image: '/img/img20231130133434_orig.jpg' },
+    { id: 4, image: '/img/img20231130135815_orig.jpg' },
+    { id: 5, image: '/img/img20231202135224_orig.jpg' },
+    { id: 6, image: '/img/img20231202173257_orig.jpg' },
 ]
+
+let objectiveAims = [
+    { id: 1, desc: 'Promote Trade' },
+    { id: 2, desc: 'Boost Investment' },
+    { id: 3, desc: 'Enhance Business Collaboration' },
+    { id: 4, desc: 'Enhance Trading, Business & Technology Knowledge' },
+    { id: 5, desc: 'Address Global Challenges' },
+    { id: 6, desc: 'Cultural Exchange Formulation' },
+    { id: 7, desc: 'Industry Mapping with Superb Intelligence Custom Clients Needs' },
+    { id: 8, desc: 'Deliver Sustainability Solution' },
+]
+
 export default {
     components: { 
         Carousel, 
@@ -267,7 +308,8 @@ export default {
             dataResources,
             logos,
             plugin,
-            jumbotron
+            jumbotron,
+            objectiveAims
         }
     }
 }

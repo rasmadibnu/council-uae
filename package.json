@@ -17,9 +17,10 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@prisma/client": "^5.8.1",
     "@tabler/icons-vue": "^2.45.0",
-    "@vueuse/core": "^10.7.1",
+    "@vueuse/core": "^10.7.2",
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -39,6 +40,7 @@
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
+    "v-calendar": "^3.1.2",
     "zod": "^3.22.4"
   },
   "prisma": {
