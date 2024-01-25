@@ -8,7 +8,7 @@ module.exports = {
       script: "./.output/server/index.mjs",
       env: {
         DATABASE_URL: "mysql://rasmadibnu:rsmdia001@localhost:3306/uae_cms",
-        JWT_SECRET_KEY: kntl0don,
+        JWT_SECRET_KEY: "kntl0don",
       },
     },
   ],
